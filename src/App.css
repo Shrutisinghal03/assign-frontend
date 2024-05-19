@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Book{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.optn{
+  display: flex;
+  justify-content: space-between;
+}
+li{
+  text-decoration: none; 
+  margin-left: 3rem;
+  font-weight: 700;
+  list-style-type: none;
+}
+header{
+  display: flex;
+}
+.logo{
+  height: 4rem;
+  width: 4rem;
+  margin-left: 2rem;
+  margin-top: 0.2rem;
+}
+header h2{
+ padding-left: 27rem;
+ margin: 7px;
+}
+header ul{
+  padding-left: 20rem;
+}
+
+header {
+  position: relative;
+  font-size: 20px;
+  color: #fff; /* White text color */
+  padding: 10px;
+  top:0; 
+  bottom: 0;
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+header ::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,114,1) 29%, rgba(0,212,255,1) 100%); /* Grey to white to grey gradient */
+  transform: scaleX(0);
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+header :hover::after {
+  transform: scaleX(1); /* Scale underline to full width */
+  box-shadow: 0 0 5px grey; /* Neon glow effect */
+}
+
+header :hover {
+  color: #05cdc1; /* Light grey text color on hover */
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* Importing a stylish font */
+
+/* Setting a dark background to highlight the text effect */
+
+/* Styling the heading */
+.designer-heading {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(9,121,114,1) 40%, rgba(0,212,255,1) 50%); /* Green gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: glow 1.5s infinite alternate;
+  margin:0;
+padding-left: 37%;
+  
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Three equal-width columns */
+  gap: 20px; /* Gap between grid items */
+  padding-left: 70px;
+  padding-top: 50px;
+}
+/* Basic styling for anchor tag */
+a{
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.Book a {
+    color: #ff9800; /* Orange color for links on black background */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Hover effect for anchor tag */
+.Book a:hover {
+    color: #ffa726; /* Lighter orange color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.BooksID{
+  background-image: url("../src/images/OIP.jpeg"); /* Replace 'your-image.jpg' with the path to your image */
+  background-size: cover; /* Cover the entire container */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  /* Additional styling for the container */
+  width: 50%;
+  height: 450px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 22rem;
+  margin-top: 2rem;
 }
